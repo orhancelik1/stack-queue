@@ -50,10 +50,5 @@ int main(int argc, char const *argv[])
     Push(9);Print();
     Peek();
     
-    
-    
-    
-
-
 return 0;
 }
