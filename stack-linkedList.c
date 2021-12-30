@@ -8,6 +8,7 @@ typedef struct Node{
 
 Node* top = NULL;
 
+Node* getNewNode(int);
 void Push(int);
 void Pop();
 void Print();
@@ -24,11 +25,23 @@ int main(int argc, char const *argv[])
     
     return 0;
 }
+//getting new node
+Node* getNewNode(int data){
+    Node* newNode = (Node*)malloc(sizeof(Node));
+    newNode->data = data;
+    newNode->next = NULL;
+
+    return newNode;
+}
 
 //inserting head (top)
 void Push(int data){
-    Node* temp = (Node*)malloc(sizeof(Node));
-    temp->data = data;
+    Node* temp = getNewNode(data);
+    if(top == NULL){
+        top = temp;
+        return;
+    }
+    
     temp->next = top;
     top = temp;
 }
