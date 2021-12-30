@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
 {
     Push(2);Print(); //2
     Push(4);Print(); //4 2
-    Push(1);Print(); //1 4 2
+    Push(1);Print(); //1 4 2 
     Push(0);Print(); //0 1 4 2
     Pop();Print();   //1 4 2
     Pop();Print();   //4 2
@@ -48,6 +48,10 @@ void Push(int data){
 
 void Pop(){
 
+    if(top == NULL){
+        printf("there is no element in the stack.\n");
+        return;
+    }
     Node* temp = top;
     top = temp->next;
     free(temp);
@@ -56,6 +60,10 @@ void Pop(){
 
 void Print(){
     Node* temp = top;
+    if(top == NULL){
+        printf("there is no element in the stack.\n");
+        return;
+    }
     printf("Stack is: ");
     while(temp!= NULL){
         printf("%d ",temp->data);
