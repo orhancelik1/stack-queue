@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define MAX_SIZE 3
+#define MAX_SIZE 99
 
 int A[MAX_SIZE];
 int top = -1;

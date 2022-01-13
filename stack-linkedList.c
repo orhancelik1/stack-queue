@@ -15,6 +15,7 @@ void Print();
 
 int main(int argc, char const *argv[])
 {
+    
     Push(2);Print(); //2
     Push(4);Print(); //4 2
     Push(1);Print(); //1 4 2 
@@ -66,7 +67,7 @@ void Print(){
     }
     printf("Stack is: ");
     while(temp!= NULL){
-        printf("%d ",temp->data);
+        printf("%d->",temp->data);
         temp = temp->next;
     }
     printf("\n");
