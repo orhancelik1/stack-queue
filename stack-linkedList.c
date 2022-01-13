@@ -12,6 +12,7 @@ Node* getNewNode(int);
 void Push(int);
 void Pop();
 void Print();
+void Front();
 
 int main(int argc, char const *argv[])
 {
@@ -23,6 +24,7 @@ int main(int argc, char const *argv[])
     Pop();Print();   //1 4 2
     Pop();Print();   //4 2
     Push(7);Print(); //7 4 2
+    Front(); //7
     
     return 0;
 }
@@ -71,4 +73,12 @@ void Print(){
         temp = temp->next;
     }
     printf("\n");
+}
+
+void Front(){
+    if(top == NULL){
+        printf("there is no element.");
+        return;
+    }
+    printf("top element is: %d",top->data);
 }
