@@ -40,7 +40,7 @@ void Print(){
 }
 
 
-int main(int argc, char const *argv[])
+void main(int argc, char const *argv[])
 {
     Peek();
     Push(5);Print();
@@ -50,5 +50,4 @@ int main(int argc, char const *argv[])
     Push(9);Print();
     Peek();
     
-return 0;
 }
